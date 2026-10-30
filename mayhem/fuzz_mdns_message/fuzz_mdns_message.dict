@@ -1,0 +1,37 @@
+# DNS / mDNS tokens for mdnsd's message_parse + mdnsd_in (RFC 1035, RFC 6762, RFC 6763)
+
+# header flags: query, response+authoritative, truncated
+flags_response="\x84\x00"
+flags_query="\x00\x00"
+flags_tc="\x02\x00"
+
+# record types (big endian) and classes
+type_a="\x00\x01"
+type_ns="\x00\x02"
+type_cname="\x00\x05"
+type_ptr="\x00\x0c"
+type_txt="\x00\x10"
+type_aaaa="\x00\x1c"
+type_srv="\x00\x21"
+type_any="\x00\xff"
+class_in="\x00\x01"
+class_in_flush="\x80\x01"
+class_in_unicast="\x80\x01"
+
+# compression pointers and label bounds
+ptr_hdr="\xc0\x0c"
+ptr_self="\xc0\x00"
+ptr_far="\xc0\x40"
+label_max="\x3f"
+
+# service names
+local=".local"
+label_local="\x05local\x00"
+label_opcua="\x0a_opcua-tcp\x04_tcp\x05local\x00"
+label_services="\x09_services\x07_dns-sd\x04_udp\x05local\x00"
+label_tcp="\x04_tcp"
+label_udp="\x04_udp"
+
+# TXT key=value pair
+txt_path="\x06path=/"
+txt_caps="\x07caps=NA"

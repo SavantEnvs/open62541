@@ -1,0 +1,6 @@
+project: savantenvs/open62541
+target: fuzz_eventfilter_parse
+cmds:
+  - cmd: /mayhem/fuzz_eventfilter_parse
+    libfuzzer: true
+    timeout: 10

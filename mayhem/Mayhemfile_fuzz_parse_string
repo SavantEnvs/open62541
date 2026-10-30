@@ -1,0 +1,6 @@
+project: savantenvs/open62541
+target: fuzz_parse_string
+cmds:
+  - cmd: /mayhem/fuzz_parse_string
+    libfuzzer: true
+    timeout: 10

@@ -1,0 +1,6 @@
+project: savantenvs/open62541
+target: fuzz_attributeoperand
+cmds:
+  - cmd: /mayhem/fuzz_attributeoperand
+    libfuzzer: true
+    timeout: 10

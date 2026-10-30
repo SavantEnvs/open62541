@@ -1,0 +1,9 @@
+project: savantenvs/open62541
+target: fuzz_tcp_message
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_tcp_message/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_tcp_message
+    libfuzzer: true
+    timeout: 10

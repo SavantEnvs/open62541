@@ -1,0 +1,7 @@
+project: savantenvs/open62541
+target: fuzz_xml_decode_encode
+cmds:
+  - cmd: /mayhem/fuzz_xml_decode_encode
+    libfuzzer: true
+    timeout: 10
+    dictionary: /mayhem/mayhem/fuzz_xml_decode_encode/fuzz_xml_decode_encode.dict   # copy of upstream tests/fuzz/fuzz_xml_decode_encode.dict

@@ -1,0 +1,6 @@
+project: savantenvs/open62541
+target: fuzz_binary_decode
+cmds:
+  - cmd: /mayhem/fuzz_binary_decode
+    libfuzzer: true
+    timeout: 10

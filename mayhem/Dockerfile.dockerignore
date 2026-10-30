@@ -1,0 +1,14 @@
+# Effective .dockerignore for `docker build -f mayhem/Dockerfile` (BuildKit prefers this over the
+# root .dockerignore). Same as upstream's, plus: local build dirs, and the two submodules the fuzz
+# build never reads (mqtt-c: MQTT PubSub is off by default; ua-nodeset: only the FULL namespace-zero
+# build needs it, the fuzz/unit builds use the REDUCED one). The .git directory is kept (full history).
+.github
+.dockerignore
+.travis*
+appveyor.yml
+docker
+build
+build-*
+TinyDockerfile
+deps/mqtt-c
+deps/ua-nodeset

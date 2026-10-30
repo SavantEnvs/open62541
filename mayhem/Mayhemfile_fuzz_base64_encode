@@ -1,0 +1,6 @@
+project: savantenvs/open62541
+target: fuzz_base64_encode
+cmds:
+  - cmd: /mayhem/fuzz_base64_encode
+    libfuzzer: true
+    timeout: 10

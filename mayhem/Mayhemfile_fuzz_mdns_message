@@ -1,0 +1,10 @@
+project: savantenvs/open62541
+target: fuzz_mdns_message
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_mdns_message/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_mdns_message
+    libfuzzer: true
+    timeout: 10
+    dictionary: /mayhem/mayhem/fuzz_mdns_message/fuzz_mdns_message.dict

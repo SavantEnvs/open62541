@@ -1,0 +1,6 @@
+project: savantenvs/open62541
+target: fuzz_config_json
+cmds:
+  - cmd: /mayhem/fuzz_config_json
+    libfuzzer: true
+    timeout: 10

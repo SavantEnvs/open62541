@@ -1,0 +1,9 @@
+project: savantenvs/open62541
+target: fuzz_certificate_parse
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_certificate_parse/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_certificate_parse
+    libfuzzer: true
+    timeout: 10

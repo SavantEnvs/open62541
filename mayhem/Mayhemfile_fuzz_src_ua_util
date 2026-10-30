@@ -1,0 +1,7 @@
+project: savantenvs/open62541
+target: fuzz_src_ua_util
+cmds:
+  - cmd: /mayhem/fuzz_src_ua_util
+    libfuzzer: true
+    timeout: 10
+    dictionary: /mayhem/mayhem/fuzz_src_ua_util/fuzz_src_ua_util.dict   # copy of upstream tests/fuzz/fuzz_src_ua_util_endpoints.dict

@@ -1,0 +1,6 @@
+project: savantenvs/open62541
+target: fuzz_pubsub_binary
+cmds:
+  - cmd: /mayhem/fuzz_pubsub_binary
+    libfuzzer: true
+    timeout: 10

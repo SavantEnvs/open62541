@@ -1,0 +1,6 @@
+project: savantenvs/open62541
+target: fuzz_datatype_description
+cmds:
+  - cmd: /mayhem/fuzz_datatype_description
+    libfuzzer: true
+    timeout: 10

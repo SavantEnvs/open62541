@@ -1,0 +1,6 @@
+project: savantenvs/open62541
+target: fuzz_mdns_xht
+cmds:
+  - cmd: /mayhem/fuzz_mdns_xht
+    libfuzzer: true
+    timeout: 10

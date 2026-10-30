@@ -1,0 +1,10 @@
+project: savantenvs/open62541
+target: fuzz_msg_message
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_msg_message/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_msg_message
+    libfuzzer: true
+    timeout: 10
+    dictionary: /mayhem/mayhem/fuzz_msg_message/fuzz_msg_message.dict   # copy of upstream tests/fuzz/fuzz_binary_message_header.dict
